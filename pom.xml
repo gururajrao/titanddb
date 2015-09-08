@@ -269,6 +269,7 @@
                                         <argument>-Dsqlite4java.library.path=${basedir}/target/dependencies</argument>
                                         <argument>com.amazonaws.services.dynamodbv2.local.main.ServerRunner</argument>
                                         <argument>-inMemory</argument>
+                                        <argument>--sharedDb</argument>
                                         <argument>-port</argument>
                                         <argument>${dynamodb-local.port}</argument>
                                     </arguments>
@@ -355,6 +356,7 @@
                                     <executable>java</executable>
                                     <arguments>
                                         <argument>-Dsqlite4java.library.path=${basedir}/target/dependencies</argument>
+                                        <argument>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9009</argument>
                                         <argument>-cp</argument>
                                         <argument>${basedir}/target/dependencies/*:${basedir}/target/dynamodb-titan054-storage-backend-1.0.0.jar</argument>
                                         <argument>com.thinkaurelius.titan.hadoop.tinkerpop.gremlin.Console</argument>
